@@ -1,0 +1,4 @@
+gameOfLife
+==========
+
+C++ project
