@@ -19,8 +19,7 @@ using namespace std;
 int main(int argc, char** argv) {
     
 
-    vector<ACell> cells;
-    cells.push_back(ACell(false));
+    vector<vector<ACell> > cells;
     
     
     

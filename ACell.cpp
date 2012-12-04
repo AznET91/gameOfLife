@@ -17,5 +17,5 @@ ACell::~ACell() {
 }
 
 ACell::ACell(bool life): AbstractCell(life){
-    
+
 }

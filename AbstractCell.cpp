@@ -7,6 +7,7 @@
 
 #include "AbstractCell.h"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -22,6 +23,7 @@ AbstractCell::~AbstractCell() {
 
 AbstractCell::AbstractCell(bool life){
     alive = life;
+    status = 0;
 }
 
 bool AbstractCell::isAlive(){
@@ -33,4 +35,19 @@ void AbstractCell::switchLife(){
         alive = false;
     else
         alive = true;
+}
+int AbstractCell::getNewStatus(){
+    return status;
+}
+
+void AbstractCell::kill(){
+    alive = false;
+}
+
+void AbstractCell::res(){
+    alive = true;
+}
+
+void AbstractCell::setStatus(int stat){
+    status = stat;
 }

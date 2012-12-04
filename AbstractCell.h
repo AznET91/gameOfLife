@@ -16,8 +16,13 @@ public:
     virtual ~AbstractCell();
     bool isAlive();
     void switchLife();
+    int getNewStatus();
+    void kill();
+    void res();
+    void setStatus(int stat);
 private:
     bool alive;
+    int status;
 };
 
 #endif	/* ABSTRACTCELL_H */

@@ -22,12 +22,15 @@ public:
     Life(ifstream inFile, ofstream outFile);
     virtual ~Life();
     void refresh();
-    void checkNeighbors();
+    void checkNeighbors(int actualCellx, int actualCelly);
     void printBoard();
     void initalize();
+    void check();
 private:
     int generation;
-    std::vector<ACell> ACells;
+    int rows;
+    int columns;
+    std::vector<vector<ACell> > ACells;
     std::vector<BCell> BCells;
 
 };

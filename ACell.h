@@ -15,7 +15,7 @@ public:
     ACell();
     ACell(const ACell& orig);
     virtual ~ACell();
-    ACell(bool);
+    ACell(bool life);
 private:
 
 };
