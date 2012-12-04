@@ -4,15 +4,23 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>ACell.h</itemPath>
+      <itemPath>AbstractCell.h</itemPath>
+      <itemPath>BCell.h</itemPath>
+      <itemPath>Life.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <itemPath>ACell.cpp</itemPath>
+      <itemPath>AbstractCell.cpp</itemPath>
+      <itemPath>BCell.cpp</itemPath>
+      <itemPath>Life.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.cpp</itemPath>
+      <itemPath>driver.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -26,6 +34,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">

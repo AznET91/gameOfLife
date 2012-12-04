@@ -35,7 +35,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/ACell.o \
+	${OBJECTDIR}/BCell.o \
+	${OBJECTDIR}/AbstractCell.o \
+	${OBJECTDIR}/driver.o \
+	${OBJECTDIR}/Life.o
 
 
 # C Compiler Flags
@@ -62,10 +66,30 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gameoflife.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gameoflife ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
-${OBJECTDIR}/main.o: main.cpp 
+${OBJECTDIR}/ACell.o: ACell.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/ACell.o ACell.cpp
+
+${OBJECTDIR}/BCell.o: BCell.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/BCell.o BCell.cpp
+
+${OBJECTDIR}/AbstractCell.o: AbstractCell.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/AbstractCell.o AbstractCell.cpp
+
+${OBJECTDIR}/driver.o: driver.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/driver.o driver.cpp
+
+${OBJECTDIR}/Life.o: Life.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Life.o Life.cpp
 
 # Subprojects
 .build-subprojects:
