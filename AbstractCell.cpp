@@ -13,6 +13,7 @@ using namespace std;
 
 AbstractCell::AbstractCell() {
     alive = false;
+    status = 0;
 }
 
 AbstractCell::AbstractCell(const AbstractCell& orig) {

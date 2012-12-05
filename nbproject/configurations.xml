@@ -20,6 +20,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>ACellLife.in</itemPath>
+      <itemPath>ACellLife.out</itemPath>
       <itemPath>driver.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"

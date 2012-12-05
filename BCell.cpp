@@ -21,4 +21,10 @@ BCell::~BCell() {
 void BCell::addAge(){
     age += 1;
 }
+BCell::BCell(bool life): AbstractCell(life){
+    age = 0;
+}
 
+int BCell::getAge(){
+    return age;
+}

@@ -8,12 +8,16 @@
 #ifndef BCELL_H
 #define	BCELL_H
 
-class BCell {
+#include "AbstractCell.h"
+
+class BCell: public AbstractCell {
 public:
     BCell();
     BCell(const BCell& orig);
+    BCell(bool life);
     virtual ~BCell();
     void addAge();
+    int getAge();
 private:
     int age;
 

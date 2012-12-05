@@ -12,6 +12,7 @@
 #include "ACell.h"
 #include "BCell.h"
 #include "fstream"
+#include "string"
 
 using namespace std;
 
@@ -19,19 +20,21 @@ class Life {
 public:
     Life();
     Life(const Life& orig);
-    Life(ifstream inFile, ofstream outFile);
+    Life(ifstream& inFile, ofstream& outFile);
     virtual ~Life();
     void refresh();
     void checkNeighbors(int actualCellx, int actualCelly);
-    void printBoard();
+    void printBoard(ofstream& outFile);
     void initalize();
     void check();
+    void setAlive();
 private:
     int generation;
     int rows;
     int columns;
-    std::vector<vector<ACell> > ACells;
-    std::vector<BCell> BCells;
+    string gameType;
+    vector<vector<ACell> > ACells;
+    vector<vector<BCell> > BCells;
 
 };
 
